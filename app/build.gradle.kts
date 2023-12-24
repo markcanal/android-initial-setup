@@ -1,11 +1,11 @@
 plugins {
+    kotlin("kapt")
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     /** Remove comment if not needed **/
     //Google Service plugin
     //id("com.google.gms.google-services")
     id("com.google.dagger.hilt.android")
-    kotlin("kapt")
     kotlin("plugin.parcelize")
     kotlin("plugin.serialization")
 }
@@ -73,7 +73,8 @@ dependencies {
     implementation(libs.androidx.compose.navigation)
     implementation(libs.androidx.splash)
     implementation(libs.androidx.datastore.preferences)
-
+    implementation(libs.kotlinx.serialization.json)
+    
     //Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext)
